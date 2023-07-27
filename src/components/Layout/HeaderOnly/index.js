@@ -1,7 +1,6 @@
-import Sidebar from "@/components/Layout/Sidebar";
 import Header from '@/components/Layout/Header'
 
-function DefaultLayput({ children }) {
+function HeaderOnly({ children }) {
     return (
         <div>
             <Header />
@@ -12,4 +11,4 @@ function DefaultLayput({ children }) {
     );
 }
 
-export default DefaultLayput;
+export default HeaderOnly;
