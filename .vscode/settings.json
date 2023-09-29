@@ -1,4 +1,14 @@
 {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "liveServer.settings.port": 5501,
+        "[html]": {
+                "editor.defaultFormatter": "vscode.html-language-features"
+        },
+        "[javascript]": {
+                "editor.defaultFormatter": "vscode.typescript-language-features"
+        },
+        "[scss]": {
+                "editor.defaultFormatter": "vscode.css-language-features"
+        }
 }

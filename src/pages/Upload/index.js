@@ -1,9 +1,9 @@
 import FormValidation from "@/components/FormValidation";
-import Todo from "@/components/Todo";
+
 
 function Upload() {
-    return <div className=''>Upload
-        <Todo/>
+    return <div className=''>
+        <FormValidation/>
     </div>;
 }
 

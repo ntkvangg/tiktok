@@ -1,8 +1,10 @@
-import Home from "@/pages/Home";
+import React from "react";
 import Following from "@/pages/Following";
 import Profile from "@/pages/Profile";
-import Upload from "@/pages/Uplodad";
 import { HeaderOnly } from "@/components/Layout";
+
+const Home = React.lazy(() => import("@/pages/Home"));
+const Upload = React.lazy(() => import("@/pages/Upload"));
 
 const publicRoutes = [
     {

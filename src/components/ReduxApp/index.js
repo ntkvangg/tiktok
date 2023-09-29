@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware, combineReducers} from 'https://cdn.skypack.dev/redux';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function bankReducer ( state = 100, action){
     switch (action.type){

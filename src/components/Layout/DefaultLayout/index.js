@@ -9,10 +9,9 @@ function DefaultLayput({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
-            <div className={cx('container')}>
-                <Sidebar />
+            <div className="container">
                 <div className={cx('content')}>{children}</div>
-            </div>
+            </div>  
         </div>
     );
 }

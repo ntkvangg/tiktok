@@ -1,31 +1,151 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --default-layout-header-height: 60px
 }
 
-body{
+body {
   display: block;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
 }
 
-.dark{
+.dark {
   background-color: #000;
   color: #fff
 }
-.text-error{
+
+.text-error {
   color: red;
 }
 
-.label{
+.label {
   display: block;
 }
 
-.form-control{
+.form-control {
   padding: 8px;
+}
+
+.btn {
+  min-width: 168px;
+  min-height: 48px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2F80ED;
+  color: #fff;
+}
+
+.btn-dander {
+  background-color: #EB5757;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #F2F2F2;
+  color: #333;
+}
+
+.btn-outline-primary {
+  background-color: #fff;
+  color: #2F80ED;
+  border: 1px solid #2F80ED;
+}
+
+.btn-outline-danger {
+  background-color: #fff;
+  color: #EB5757;
+  border: 1px solid #EB5757;
+
+  &:hover {
+    background-color: rgba(254, 44, 85, 0.06);
+    color: #EB5757;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+    /* Small devices (phones) */
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+    /* Medium devices (tablets) */
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+    /* Large devices (desktops) */
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    /* Extra-large devices (large desktops) */
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+    /* Extra-large devices (large desktops) */
+  }
+}
+
+.container-xl{
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 576px) {
+    max-width: 100%;
+    /* Small devices (phones) */
+  }
+
+  @media (min-width: 768px) {
+    max-width: 100%;
+    /* Medium devices (tablets) */
+  }
+
+  @media (min-width: 992px) {
+    max-width: 100%;
+    /* Large devices (desktops) */
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    /* Extra-large devices (large desktops) */
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+    /* Extra-large devices (large desktops) */
+  }
+    
+}
+
+.container-fuild{
+  width: 100%;
 }

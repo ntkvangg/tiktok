@@ -2,6 +2,7 @@ import { createContext, useState, useContext } from "react";
 
 
 const ThemeContext = createContext('light');
+console.log(ThemeContext);
 
 function ContextApp (){
     const [theme, setTheme] = useState('light')
@@ -17,8 +18,6 @@ function Page (){
 
 function Content (){
     const theme = useContext(ThemeContext);
-
-    const [user, setUser] = useState("");
     return <>
         <h2 className={theme}>React</h2>
     </>

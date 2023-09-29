@@ -1,3 +1,4 @@
+import React, {Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "@/routes";
 import { DefaultLayout } from "@/components/Layout";
@@ -8,7 +9,6 @@ import {useStore} from "./store";
 
 function App() {
     const [state, dispatch] = useStore();
-    console.log(state);
     return (
         <Router>
             <Routes>
@@ -21,7 +21,9 @@ function App() {
                             path={route.path}
                             element={
                                 <Layout>
-                                    <Page />
+                                    <Suspense fallback={<p>Loading....</p>}>
+                                        <Page />
+                                    </Suspense>
                                 </Layout>
                             }
                         />

@@ -2,6 +2,15 @@ import React from 'react';
 import { useStore } from '../../store';
 import {setTodoInput, addJob} from '../../store';
 
+/*
+    Để dùng useReducer, ta cần 3 thứ:
+    1. Init State
+    2. Action
+    3. Reducer
+    4. Dispatch
+
+*/
+
 function Todo(){
     const [state, dispatch] = useStore();
 
