@@ -9,9 +9,10 @@ const SliderContainer = styled.div`
   overflow: hidden; /* Hide overflow for images that are larger than the container */
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const Button = styled.button`

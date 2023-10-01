@@ -32,17 +32,16 @@ body {
 }
 
 .btn {
-  min-width: 168px;
-  min-height: 48px;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  padding: .45rem 1.2rem;
+  line-height: 1.2rem;
+  font-family: Poppins;
 }
 
 .btn-primary {
@@ -50,7 +49,7 @@ body {
   color: #fff;
 }
 
-.btn-dander {
+.btn-danger {
   background-color: #EB5757;
   color: #fff;
 }
@@ -104,16 +103,18 @@ body {
 
   @media (min-width: 1200px) {
     max-width: 1140px;
+    width: 100%
     /* Extra-large devices (large desktops) */
   }
 
   @media (min-width: 1400px) {
     max-width: 1320px;
+    width: 100%
     /* Extra-large devices (large desktops) */
   }
 }
 
-.container-xl{
+.container-xl {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -143,9 +144,126 @@ body {
     max-width: 1320px;
     /* Extra-large devices (large desktops) */
   }
-    
+
 }
 
-.container-fuild{
+.container-fuild {
   width: 100%;
+}
+
+.label {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.label-danger {
+  background-color: #EB5757;
+  color: #fff;
+}
+
+/* CSS for Bootstrap-like columns */
+
+/* 12-column layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+
+.col-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.mr-3 {
+  margin-right: 6px;
+}
+.mr-2{
+  margin-right: 4px;
+}
+.ml-2{
+  margin-left: 4px;
+}
+
+.mr-5{
+  margin-right: 10px;
+}
+
+.star{
+  color: #FFAD33
 }

@@ -52,9 +52,6 @@ const CartIcon = styled.span`
   cursor: pointer;
 `;
 
-const LoginIcon = styled.span`
-  cursor: pointer;
-`;
 
 const Wrapper = styled.div`
 
