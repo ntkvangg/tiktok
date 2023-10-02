@@ -34,21 +34,21 @@ const CustomerService = ()=>{
             <ContainerIconStyeled>
                 <Icon icon={faTruck} className="icon"/>
             </ContainerIconStyeled>
-            <h2>Free AND FAST DELIVERY</h2>
+            <h2 className="text-center">Free AND FAST DELIVERY</h2>
             <span>Free delivery for all orders over $140</span>
         </ColumnStyled>
         <ColumnStyled>
             <ContainerIconStyeled>
                 <Icon icon={faHeadphones} className="icon"/>
             </ContainerIconStyeled>
-            <h2>24/7 CUSTOMER SERVICE</h2>
+            <h2 className="text-center">24/7 CUSTOMER SERVICE</h2>
             <span>Friendly 24/7 customer support</span>
         </ColumnStyled>
         <ColumnStyled>
             <ContainerIconStyeled>
                 <Icon icon={faShield} className="icon"/>
             </ContainerIconStyeled>
-            <h2>MONEY BACK GUARANTEE</h2>
+            <h2 className="text-center">MONEY BACK GUARANTEE</h2>
             <span>We return money within 30 days</span>
         </ColumnStyled>
     </WrapperStyled>

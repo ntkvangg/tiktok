@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Image } from './Slider';
 import RateStar from './RateStar';
+import Icon from './FontAwesomeIcon';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const CardProductWrapper = styled.div`
     display: flex;
@@ -84,33 +86,38 @@ const AddToCartContainer = styled.div`
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     &:hover{
-        // transform: scale(1.05);
         opacity: 1;
         visibility: visible;
         cursor: pointer;
     }
     button{
         width: 100%;
-        background-color: #007bff;
+        background-color: #000;
         color: #fff;
         border: none;
         padding: 5px 10px;
         cursor: pointer;
+        border-radius: 2px;
         transition: background-color 0.3s ease;
-
         &:hover{
-            background-color: #0056b3;
+            background-color: #000;
+        }
+        .icon{
+            margin-right: 5px;
         }
     }
 `
 
 const CardProduct = ({ product }) => {
-    return <CardProductWrapper className='col-2 product-card'>
+    return <CardProductWrapper className='product-card'>
         <TagDiscount className='label label-danger'>40%</TagDiscount>
         <ContainerImage>
             <Image src="https://images.pexels.com/photos/9842750/pexels-photo-9842750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
             <AddToCartContainer className='add-to-cart'>
-                <button className='btn btn-primary'>Add to cart</button>
+                <button className='btn'>
+                    <Icon icon={faShoppingCart} className='icon' />
+                    <span>Add to cart</span>
+                </button>
             </AddToCartContainer>
         </ContainerImage>
         <CardFooter>

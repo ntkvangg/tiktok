@@ -49,14 +49,24 @@ export const HeaderSectionStyle = styled.div`
     align-items: end;
 `
 
+const ButtonIconStyle = styled.button`
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    .icon{
+        color: #666666;
+    }
+`
+
 export default function FlashSales() {
     return (
         <WrapperFlashSalesStyle className='flash-salses'>
             <HeaderSectionStyle className='header'>
                 <HeaderCategory label="Today's" title="Fash sales" />
                 <ContainerButtons>
-                    <Icon icon={faCircleArrowLeft} className="icon icon-left" />
-                    <Icon icon={faCircleArrowRight} className="icon icon-right" />
+                    <ButtonIconStyle><Icon icon={faCircleArrowLeft} className="icon icon-left" /></ButtonIconStyle>
+                    <ButtonIconStyle><Icon icon={faCircleArrowRight} className="icon icon-right" /></ButtonIconStyle>
                 </ContainerButtons>
             </HeaderSectionStyle>
             <WrapperProductStyle className='product-list'>

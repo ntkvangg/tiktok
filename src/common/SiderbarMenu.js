@@ -1,4 +1,3 @@
-import styles from "./Sider.module.scss";
 import classNames from "classnames/bind";
 import Icon from "@/common/FontAwesomeIcon";
 import { faHome, faUserGroup, faCompass } from "@fortawesome/free-solid-svg-icons";
