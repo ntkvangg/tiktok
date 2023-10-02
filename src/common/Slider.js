@@ -7,11 +7,12 @@ const SliderContainer = styled.div`
   width: 100%;
   height: 300px; /* Set the height of the slider */
   overflow: hidden; /* Hide overflow for images that are larger than the container */
+  flex: 1;
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
 `;
 

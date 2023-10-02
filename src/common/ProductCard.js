@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Image } from '../common/Slider';
-import RateStar from '../common/RateStar';
+import { Image } from './Slider';
+import RateStar from './RateStar';
 
 const CardProductWrapper = styled.div`
     display: flex;
@@ -9,20 +9,34 @@ const CardProductWrapper = styled.div`
     align-items: flex-start;
     gap: 1rem;
     position: relative;
-    margin-right: 15px;
+    height: 350px; /* Set the fixed height */
+    margin: 10px;
+    transition: transform 0.3s ease;
 `
 const TagDiscount = styled.div`
     position: absolute;
     left: 1rem;
-    top: .5rem;
+    top: 1rem;
 `
 
 const ContainerImage = styled.div`
     border-radius: 0.25rem;
-    background: var(--Secondary, #F5F5F5);
+    background: #efe9e7;
     overflow: hidden;
     width: 100%;
-    height: 180px;
+    flex: 1; /* Make this div flex to take available vertical space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        .add-to-cart{
+            // transform: scale(1.05);
+            opacity: 1;
+            visibility: visible;
+            cursor: pointer;
+        }
+    }
 `
 
 const CardFooter = styled.div`
@@ -37,17 +51,16 @@ const ProductNameStyle = styled.div`
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
 `
 
 const PriceStyle = styled.span`
     color: var(--Secondary-2, #DB4444);
-    /* Title/16PX Medium */
     font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
 `
 
 const PriceDiscountStyle = styled.span`
@@ -56,16 +69,49 @@ const PriceDiscountStyle = styled.span`
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
     text-decoration-line: strikethrough;
     opacity: 0.5;
 `
 
+const AddToCartContainer = styled.div`
+    position: absolute;
+    top: 68%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    &:hover{
+        // transform: scale(1.05);
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+    button{
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover{
+            background-color: #0056b3;
+        }
+    }
+`
+
 const CardProduct = ({ product }) => {
-    return <CardProductWrapper className='col-4'>
+    return <CardProductWrapper className='col-2 product-card'>
         <TagDiscount className='label label-danger'>40%</TagDiscount>
         <ContainerImage>
             <Image src="https://images.pexels.com/photos/9842750/pexels-photo-9842750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            <AddToCartContainer className='add-to-cart'>
+                <button className='btn btn-primary'>Add to cart</button>
+            </AddToCartContainer>
         </ContainerImage>
         <CardFooter>
             <ProductNameStyle>HAVIT HV-G92 Gamepad</ProductNameStyle>

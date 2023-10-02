@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderCategory from '@/common/HeaderCategory';
-import CardProduct from '@/components/ProductItem';
+import CardProduct from '@/common/ProductCard';
 import styled from 'styled-components';
 import { faCircleArrowRight, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Icon from "@/common/FontAwesomeIcon";
@@ -53,10 +53,10 @@ export default function FlashSales() {
     return (
         <WrapperFlashSalesStyle className='flash-salses'>
             <HeaderSectionStyle className='header'>
-                <HeaderCategory label="Today's" title="Fash sales"/>
+                <HeaderCategory label="Today's" title="Fash sales" />
                 <ContainerButtons>
-                    <Icon icon={faCircleArrowLeft} className="icon icon-left"/>
-                    <Icon icon={faCircleArrowRight} className="icon icon-right"/>
+                    <Icon icon={faCircleArrowLeft} className="icon icon-left" />
+                    <Icon icon={faCircleArrowRight} className="icon icon-right" />
                 </ContainerButtons>
             </HeaderSectionStyle>
             <WrapperProductStyle className='product-list'>
