@@ -9,9 +9,24 @@
 }
 
 body {
-  display: block;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
+  // display: block;
+  // line-height: 1.5;
+  // text-rendering: optimizeSpeed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Set chiều cao tối thiểu cho body là 100% của viewport */
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
 .dark {

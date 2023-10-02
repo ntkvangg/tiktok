@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import styled from 'styled-components';
 import { Image } from './Slider';
 import RateStar from './RateStar';
@@ -14,6 +14,8 @@ const CardProductWrapper = styled.div`
     height: 350px; /* Set the fixed height */
     margin: 10px;
     transition: transform 0.3s ease;
+    max-width: 350px;
+    min-width: 250px;
 `
 const TagDiscount = styled.div`
     position: absolute;
@@ -108,8 +110,10 @@ const AddToCartContainer = styled.div`
     }
 `
 
-const CardProduct = ({ product }) => {
-    return <CardProductWrapper className='product-card'>
+const CardProduct = forwardRef(function({product}, ref) {
+    console.log(product);
+    console.log(ref);
+    return <CardProductWrapper className='product-card' ref={ref}>
         <TagDiscount className='label label-danger'>40%</TagDiscount>
         <ContainerImage>
             <Image src="https://images.pexels.com/photos/9842750/pexels-photo-9842750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
@@ -129,6 +133,6 @@ const CardProduct = ({ product }) => {
             <RateStar number={5} />
         </CardFooter>
     </CardProductWrapper>
-};
+});
 
 export default CardProduct;

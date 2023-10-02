@@ -1,14 +1,16 @@
 import Header from "@/common/NavigationMenu";
 import Footer from "@/common/Footer";
+import TopHeader from "@/common/TopHeader";
 
 
 function DefaultLayput({ children }) {
     return (
         <div className="">
+            <TopHeader/>
             <Header />
-            <div className="container">
+            <main className="container">
                 <div className="">{children}</div>
-            </div>
+            </main>
             <Footer/>  
         </div>
     );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import CardProduct from '@/common/ProductCard';
+import CardProduct from '@/common/ProductCard'; // Import your CardProduct component
 
 const ProductsWrapper = styled.div`
   display: flex;

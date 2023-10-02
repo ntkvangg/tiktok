@@ -1,16 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const WrapperStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-`
 
 const ContainerStyled = styled.div`
     display: flex;
@@ -24,7 +14,7 @@ const ColumnStyled = styled.div`
 
 export default function Footer() {
   return (
-    <WrapperStyled className='footer'>
+    <footer className='footer'>
         <ContainerStyled>
             <ColumnStyled>
                 <h2>Logo</h2>
@@ -42,6 +32,6 @@ export default function Footer() {
                 <span>Get 10% off your list order</span>
             </ColumnStyled>
         </ContainerStyled>
-    </WrapperStyled>
+    </footer>
   )
 }

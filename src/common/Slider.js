@@ -1,13 +1,25 @@
 import styled from "styled-components";
 import React from "react";
 import Icon from "@/common/FontAwesomeIcon";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 const SliderContainer = styled.div`
   position: relative;
   width: 100%;
   height: 300px; /* Set the height of the slider */
   overflow: hidden; /* Hide overflow for images that are larger than the container */
-  flex: 1;
+  .slider{
+    display: flex;
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    .slide{
+        flex: 0 0 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+  }
 `;
 
 export const Image = styled.img`
@@ -20,11 +32,17 @@ const Button = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 8px 16px;
+  background: transparent;
+  padding: 0;
+  outline: none;
   border: none;
   cursor: pointer;
+  color: #666666;
+
+  &:hover {
+    color: #000;
+  }
+  
 `;
 
 const PrevButton = styled(Button)`
@@ -65,10 +83,14 @@ const Slider = () => {
   };
 
   return (
-    <SliderContainer>
-      <Image key={images[currentImage].id} src={images[currentImage].image} alt={`Image ${images[currentImage].id}`} />
-      <PrevButton onClick={prevImage}><Icon icon={faChevronLeft}></Icon></PrevButton>
-      <NextButton onClick={nextImage}><Icon icon={faChevronRight}></Icon></NextButton>
+    <SliderContainer className="slider-container">
+        <div className="slider">
+            <div className="slide">
+                <Image key={images[currentImage].id} src={images[currentImage].image} alt={`Image ${images[currentImage].id}`} />
+            </div>
+        </div>
+      <PrevButton onClick={prevImage}><Icon icon={faArrowAltCircleLeft} className="icon fa-2xl"></Icon></PrevButton>
+      <NextButton onClick={nextImage}><Icon icon={faArrowAltCircleRight} className="icon fa-2xl"></Icon></NextButton>
     </SliderContainer>
   );
 };
